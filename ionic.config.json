@@ -1,0 +1,7 @@
+{
+  "name": "sqlite-electron",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
