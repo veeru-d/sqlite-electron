@@ -258,7 +258,7 @@ Run the app
 cd <root>
 npx cap open @capacitor-community/electron
 ```
-**DOES NOT WORK***
+**DOES NOT WORK**
 ```
 ℹ Opening Electron platform: start �
 ℹ Opening Electron platform: building electron app
@@ -310,7 +310,7 @@ Node.js v22.13.0
 
 **DOES NOT WORK**
 
-cmd-line error
+cmd-line error:
 ```
 > sqlite-electron@1.0.0 electron:start
 > npm run build && electron --inspect=5858 ./
