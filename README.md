@@ -10,7 +10,8 @@ App works successfully in browser
 `npm install @capacitor/android`
 
 `npx cap add android`
-`√ Adding native android project in android in 63.39ms
+```
+√ Adding native android project in android in 63.39ms
 √ add in 64.02ms
 √ Copying web assets from www to android\app\src\main\assets\public in 12.26ms
 √ Creating capacitor.config.json in android\app\src\main\assets in 666.20μs
@@ -25,7 +26,8 @@ App works successfully in browser
 √ Syncing Gradle in 370.50μs
 [success] android platform added!
 Follow the Developer Workflow guide to get building:
-https://capacitorjs.com/docs/basics/workflow`
+https://capacitorjs.com/docs/basics/workflow
+```
 
 `npx cap run android`
 App works successfully in android emulator based on API version 35
@@ -34,7 +36,8 @@ App works successfully in android emulator based on API version 35
 `npm i @capacitor-community/sqlite`
 
 `npx cap sync android`
-`√ Copying web assets from www to android\app\src\main\assets\public in 33.43ms
+```
+√ Copying web assets from www to android\app\src\main\assets\public in 33.43ms
 √ Creating capacitor.config.json in android\app\src\main\assets in 893.20μs
 √ copy android in 55.11ms
 √ Updating Android plugins in 4.94ms
@@ -45,11 +48,13 @@ App works successfully in android emulator based on API version 35
        @capacitor/keyboard@7.0.1
        @capacitor/status-bar@7.0.1
 √ update android in 248.07ms
-[info] Sync finished in 0.35s`
+[info] Sync finished in 0.35s
+```
 
 ### Create table and insert rows
 **`home.page.ts:`**
-`import { Component, OnInit } from '@angular/core';
+```
+import { Component, OnInit } from '@angular/core';
 import {
   IonHeader,
   IonToolbar,
@@ -97,7 +102,8 @@ export class HomePage implements OnInit {
     await db.close();
     await sqlite.closeConnection('todo', false);
   }
-}`
+}
+```
 
 `npm run build --configuration=development`
 
@@ -111,7 +117,8 @@ DB contains the expected table & row.
 [Ref](https://github.com/capacitor-community/sqlite)
 
 **`capacitor.config.ts:`**
-`import type { CapacitorConfig } from '@capacitor/cli';
+```
+import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
@@ -124,7 +131,8 @@ const config: CapacitorConfig = {
   },
 };
 
-export default config;`
+export default config;
+```
 
 [Ref](https://capacitor-community.github.io/electron/docs/gettingstarted)
 
@@ -134,7 +142,8 @@ export default config;`
 Creates `electron` folder successfully.
 
 `output of above cmd:`
-`ℹ Adding Electron platform: start �
+```
+ℹ Adding Electron platform: start �
 ℹ Adding Electron platform: extracting template
 ℹ Adding Electron platform: copying capacitor config file
 ℹ Adding Electron platform: setting up electron project
@@ -154,14 +163,16 @@ Are you sure eslint-plugin-jsdoc is installed?
 Will install: @capacitor-community/sqlite@7.0.0
 
 ℹ Updating Electron plugins: installing electron plugin files
-✔ Updating Electron plugins: completed in 4.02s`
+✔ Updating Electron plugins: completed in 4.02s
+```
 
 ** not sure about `Unable to find node_modules/eslint-plugin-jsdoc` issue above **
 
 `npx cap open @capacitor-community/electron`
 **DOES NOT WORK**
 
-`ℹ Opening Electron platform: start �
+```
+ℹ Opening Electron platform: start �
 ℹ Opening Electron platform: building electron app
 ⠹ Opening Electron platform: running electron appError: undefined
 ✖ Opening Electron platform:
@@ -201,10 +212,12 @@ Node.js v22.13.0
   code: 'ERR_UNHANDLED_REJECTION'
 }
 
-Node.js v22.13.0`
+Node.js v22.13.0
+```
 
 So, tried the following based on [Ref](https://github.com/capacitor-community/sqlite)
-`cd electron
+```
+cd electron
 npm install --save better-sqlite3-multiple-ciphers
 npm install --save electron-json-storage
 npm install --save jszip
@@ -218,7 +231,8 @@ npm install --save-dev @types/crypto-js
 npm install --save-dev electron@25.8.4
 npm uninstall --save-dev electron-rebuild
 npm install --save-dev @electron/rebuild
-npm install --save-dev electron-builder@24.6.4`
+npm install --save-dev electron-builder@24.6.4
+```
 
 Added this to `electron/tsconfig.json`:
 `"skipLibCheck": true`
@@ -227,7 +241,8 @@ Run the app
 `cd <root>`
 `npx cap open @capacitor-community/electron`
 **DOES NOT WORK***
-`ℹ Opening Electron platform: start �
+```
+ℹ Opening Electron platform: start �
 ℹ Opening Electron platform: building electron app
 ⠼ Opening Electron platform: running electron appError: undefined
 ✖ Opening Electron platform:
@@ -267,7 +282,8 @@ Node.js v22.13.0
   code: 'ERR_UNHANDLED_REJECTION'
 }
 
-Node.js v22.13.0`
+Node.js v22.13.0
+```
 
 ## Alternate way tried to run the electron project
 `cd electron`
@@ -276,7 +292,8 @@ Node.js v22.13.0`
 **DOES NOT WORK**
 
 cmd-line error
-`> sqlite-electron@1.0.0 electron:start
+```
+> sqlite-electron@1.0.0 electron:start
 > npm run build && electron --inspect=5858 ./
 
 > sqlite-electron@1.0.0 build
@@ -292,10 +309,12 @@ in setupCapacitorElectronPlugins
 }
 CapacitorCommunitySqlite
 Skip checkForUpdates because application is not packed and dev update config is not forced
-checkForUpdatesAndNotify called, downloadPromise is null`
+checkForUpdatesAndNotify called, downloadPromise is null
+```
 
-dev tools in electron app, console logs
-`ERROR Error: "CapacitorSQLite" plugin is not implemented on electron
+electron dev tools console logs
+```
+ERROR Error: "CapacitorSQLite" plugin is not implemented on electron
     at B (chunk-XR2CIPKH.js:1:1374)
     at chunk-XR2CIPKH.js:1:1490
     at f.invoke (polyfills-4BK4MXU4.js:1:6511)
@@ -305,7 +324,8 @@ dev tools in electron app, console logs
     at polyfills-4BK4MXU4.js:2:553
     at f.invokeTask (polyfills-4BK4MXU4.js:1:7136)
     at Object.onInvokeTask (chunk-DIB2G2IA.js:7:23503)
-    at f.invokeTask (polyfills-4BK4MXU4.js:1:7057)`
+    at f.invokeTask (polyfills-4BK4MXU4.js:1:7057)
+```
 
 So, in summary, android app works as expected.
 
