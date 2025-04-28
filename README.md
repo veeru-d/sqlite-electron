@@ -1,5 +1,9 @@
 # Using @capacitor-community/sqlite plugin in electron app with latest versions of ionic, angular and capacitor
 
+## TLDR
+`@capacitor-community/sqlite` works in `android` but throws `"CapacitorSQLite" plugin is not implemented on electron` error in `electron`.
+
+
 ## Create basic ionic app
 ```
 ionic start sqlite-electron blank --type=angular-standalone --capacitor
