@@ -151,9 +151,9 @@ export default config;
 `npm i @capacitor-community/electron`
 
 `npx cap add @capacitor-community/electron`
-<p>Creates `electron` folder successfully.</p>
+Creates `electron` folder successfully.
 
-<p>output of above cmd</p>
+output of above cmd:
 ```
 ℹ Adding Electron platform: start �
 ℹ Adding Electron platform: extracting template
