@@ -1,16 +1,20 @@
 # Using @capacitor-community/sqlite plugin in electron app with latest versions of ionic, angular and capacitor
 
 ## Create basic ionic app
-`ionic start sqlite-electron blank --type=angular-standalone --capacitor`
+```
+ionic start sqlite-electron blank --type=angular-standalone --capacitor
 
-`ionic serve`
+ionic serve
+```
 <p>App works successfully in browser</p>
 
 ## Add Android platform
-`npm install @capacitor/android`
-
-`npx cap add android`
 ```
+npm install @capacitor/android
+```
+
+```
+npx cap add android
 √ Adding native android project in android in 63.39ms
 √ add in 64.02ms
 √ Copying web assets from www to android\app\src\main\assets\public in 12.26ms
@@ -29,7 +33,9 @@ Follow the Developer Workflow guide to get building:
 https://capacitorjs.com/docs/basics/workflow
 ```
 
-`npx cap run android`
+```
+npx cap run android
+```
 <p>App works successfully in android emulator based on API version 35</p>
 
 ## Add sqlite to android
