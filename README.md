@@ -4,7 +4,7 @@
 `ionic start sqlite-electron blank --type=angular-standalone --capacitor`
 
 `ionic serve`
-App works successfully in browser
+<p>App works successfully in browser</p>
 
 ## Add Android platform
 `npm install @capacitor/android`
@@ -30,7 +30,7 @@ https://capacitorjs.com/docs/basics/workflow
 ```
 
 `npx cap run android`
-App works successfully in android emulator based on API version 35
+<p>App works successfully in android emulator based on API version 35</p>
 
 ## Add sqlite to android
 `npm i @capacitor-community/sqlite`
@@ -110,8 +110,10 @@ export class HomePage implements OnInit {
 `npx cap sync android`
 
 `npx cap run android`
-DB /data/data/io.ionic.starter/databases/todoSQLite.db created successfully.
-DB contains the expected table & row.
+<p>
+  DB /data/data/io.ionic.starter/databases/todoSQLite.db created successfully.
+  DB contains the expected table & row.
+</p>
 
 ## Add Electron platform
 [Ref](https://github.com/capacitor-community/sqlite)
@@ -139,9 +141,9 @@ export default config;
 `npm i @capacitor-community/electron`
 
 `npx cap add @capacitor-community/electron`
-Creates `electron` folder successfully.
+<p>Creates `electron` folder successfully.</p>
 
-`output of above cmd:`
+<p>output of above cmd</p>
 ```
 ℹ Adding Electron platform: start �
 ℹ Adding Electron platform: extracting template
@@ -166,9 +168,11 @@ Will install: @capacitor-community/sqlite@7.0.0
 ✔ Updating Electron plugins: completed in 4.02s
 ```
 
-** not sure about `Unable to find node_modules/eslint-plugin-jsdoc` issue above **
+**not sure about `Unable to find node_modules/eslint-plugin-jsdoc` issue above**
 
-`npx cap open @capacitor-community/electron`
+```
+npx cap open @capacitor-community/electron
+```
 **DOES NOT WORK**
 
 ```
@@ -235,11 +239,15 @@ npm install --save-dev electron-builder@24.6.4
 ```
 
 Added this to `electron/tsconfig.json`:
-`"skipLibCheck": true`
+```
+"skipLibCheck": true
+```
 
 Run the app
-`cd <root>`
-`npx cap open @capacitor-community/electron`
+```
+cd <root>
+npx cap open @capacitor-community/electron
+```
 **DOES NOT WORK***
 ```
 ℹ Opening Electron platform: start �
@@ -289,6 +297,7 @@ Node.js v22.13.0
 `cd electron`
 
 `npm run electron:start`
+
 **DOES NOT WORK**
 
 cmd-line error
@@ -329,4 +338,7 @@ ERROR Error: "CapacitorSQLite" plugin is not implemented on electron
 
 So, in summary, android app works as expected.
 
-Electron app launches and displays the home page, but throws `"CapacitorSQLite" plugin is not implemented on electron` in dev tools console tab.
+Electron app launches and displays the home page, but throws this error in dev tools console tab.
+```
+"CapacitorSQLite" plugin is not implemented on electron
+```
